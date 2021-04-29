@@ -232,7 +232,7 @@
         var _typingArea = "";
         typingArea.style.cssText = "white-space:pre-wrap;";
         var cursor = document.createElement('span');
-        cursor.className = 'typing-cursor';
+        cursor.className = 'blink';
         cursor.textContent = _this.options.cursorChar;
 
         _this.element.innerHTML = '';

@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <style>
         @font-face {
-            font-family: Zpix;
-            src: url(webfonts/Zpix.woff2);
-        }
-        
-        * {
-            font-family: 'Zpix' !important;
+            font-family: JetBrainsMono;
+            src: url(webfonts/JetBrainsMono-Regular.woff2);
         }
         
         body {
-            background-color: #232323;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Source Han Sans SC, Noto Sans CJK SC, Microsoft YaHei, WenQuanYi Micro Hei, WenQuanYi Zen Hei, Helvetica Neue, Arial, sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
         }
@@ -71,14 +70,13 @@
         .h-2-1-1 {
             writing-mode: tb-rl;
             font-size: 3.2vh;
-            text-indent: 8vh;
+            text-indent: 5vh;
             letter-spacing: 2vh;
             color: #fefefe;
             text-decoration: none;
-            font-weight: 600;
         }
         
-        .typing-cursor {
+        .blink {
             opacity: 1;
             -webkit-animation: blink 0.7s infinite;
             -moz-animation: blink 0.7s infinite;
@@ -119,6 +117,10 @@
             100% {
                 opacity: 1;
             }
+        }
+        
+        span {
+            font-family: "JetBrainsMono" !important;
         }
     </style>
 </head>
