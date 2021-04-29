@@ -9,13 +9,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <style>
         @font-face {
-            font-family: JetBrainsMono-Thin;
-            src: url(webfonts/JetBrainsMono-Thin.woff2);
+            font-family: JetBrainsMono;
+            src: url(webfonts/JetBrainsMono-Regular.woff2);
+        }
+        
+        @font-face {
+            font-family: Zpix;
+            src: url(webfonts/Zpix.woff2);
+        }
+        
+        @font-face {
+            font-family: SourceHanSerif;
+            src: url(webfonts/SourceHanSerif-Medium.otf);
+        }
+        
+        * {
+            font-family: 'Zpix', 'JetBrainsMono', 'SourceHanSerif' !important;
         }
         
         body {
             background-color: #232323;
-            font-family: 'JetBrainsMono-Thin';
             margin: 0;
             padding: 0;
         }
@@ -71,7 +84,8 @@
             text-indent: 5vh;
             letter-spacing: 1vh;
             color: #fefefe;
-            text-decoration: none
+            text-decoration: none;
+            font-family: 'SourceHanSerif' !important;
         }
     </style>
 </head>
