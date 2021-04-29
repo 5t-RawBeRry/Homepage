@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title> Homepage | Saiki</title>
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <style>
+        @font-face {
+            font-family: JetBrainsMono-Thin;
+            src: url(webfonts/JetBrainsMono-Thin.woff2);
+        }
+        
+        body {
+            background-color: #232323;
+            font-family: 'JetBrainsMono-Thin';
+            margin: 0;
+            padding: 0;
+        }
+        
+        .h {
+            width: 100%;
+            height: 100%;
+            background: url(images/bg-1.png) center;
+            background-size: cover;
+            position: fixed;
+        }
+        
+        .h-1 {
+            width: 100%;
+            height: 50vh;
+            color: #232323;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.5) !important;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding-bottom: 4rem;
+            padding-top: 4rem;
+        }
+        
+        .h-1-1 {
+            padding: .4rem;
+            margin: 5%;
+            font-size: 150%;
+        }
+        
+        .h-2 {
+            width: 100%;
+            height: 50vh;
+            background-color: #232323;
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            justify-content: center;
+            align-items: stretch;
+        }
+        
+        .h-2-1 {
+            width: 10vh;
+        }
+        
+        .h-2-1-1 {
+            writing-mode: tb-rl;
+            font-size: 3vh;
+            text-indent: 5vh;
+            letter-spacing: 1vh;
+            color: #fefefe;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h">
+        <div class="h-1">
+            <div class="h-1-1">
+                <h1>你好世界！</h1>
+                <p>/* echo 'Hello World' */</p>
+            </div>
+        </div>
+        <div class="h-2">
+            <div class="h-2-1">
+                <a href="#" class="h-2-1-1">
+                    博客
+                </a>
+            </div>
+            <div class="h-2-1">
+                <a href="#" class="h-2-1-1">
+                    留声室
+                </a>
+            </div>
+            <div class="h-2-1">
+                <a href="#" class="h-2-1-1">
+                    开源
+                </a>
+            </div>
+            <div class="h-2-1">
+                <a href="#" class="h-2-1-1">
+                    共享
+                </a>
+            </div>
+        </div>
+    </div>
+    <meting-js server="netease" type="playlist" id="2417487021" fixed="true" lrc-type="0"></meting-js>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script>
+        console.log('\n' + ' %c 54ik1\'s Homepage  %c http://richkk.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+    </script>
+</body>
+
+</html>
