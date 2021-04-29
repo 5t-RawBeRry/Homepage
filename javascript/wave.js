@@ -36,4 +36,3 @@ function loop() {
     requestAnimFrame(loop);
 }
 loop();
-console.log('\n'.concat(' %c Huawei3Com Class 1 ').concat(' %c 04292021 ', '\n', '\n'), 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3;color:#232323; padding:5px 0;');
