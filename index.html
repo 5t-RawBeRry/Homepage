@@ -131,17 +131,38 @@
         span {
             font-family: "JetBrainsMono" !important;
         }
+        
+        video {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            z-index: -11;
+        }
+        
+        source {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="h">
+        <video autoplay loop muted>
+            <source src="video/bgv.mp4" type="video/mp4"  />
+        </video>
         <div class="h-1">
             <div class="h-1-1">
                 <h1>你好世界！</h1>
                 <p id="ty" style="white-space:pre;"></p>
             </div>
-            <canvas id="canvas" style="z-index:1;"></canvas>
+            <canvas id="canvas"></canvas>
         </div>
         <div class="h-2">
             <div class="h-2-1">

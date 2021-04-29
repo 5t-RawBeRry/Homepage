@@ -21,9 +21,9 @@ function loop() {
     step++;
     for (var j = lines.length - 1; j >= 0; j--) {
         ctx.fillStyle = lines[j];
-        var angle = (step + j * 45) * Math.PI / 180;
-        var deltaHeight = Math.sin(angle) * 100;
-        var deltaHeightRight = Math.cos(angle) * 100;
+        var angle = (step + j * 45) * Math.PI / 100;
+        var deltaHeight = Math.sin(angle) * 80;
+        var deltaHeightRight = Math.cos(angle) * 80;
         ctx.beginPath();
         ctx.moveTo(0, canvas.height / 2 + deltaHeight);
         ctx.bezierCurveTo(canvas.width / 2, canvas.height / 2 + deltaHeight - 50, canvas.width / 2, canvas.height / 2 + deltaHeightRight - 50, canvas.width, canvas.height / 2 + deltaHeightRight);
