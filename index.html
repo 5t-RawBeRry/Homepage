@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <style>
         @font-face {
-            font-family: JetBrainsMono;
-            src: url(webfonts/JetBrainsMono-Regular.woff2);
-        }
-        
-        @font-face {
             font-family: Zpix;
             src: url(webfonts/Zpix.woff2);
         }
@@ -24,7 +19,7 @@
         }
         
         * {
-            font-family: 'Zpix', 'JetBrainsMono', 'SourceHanSerif' !important;
+            font-family: 'Zpix', 'SourceHanSerif' !important;
         }
         
         body {
@@ -64,10 +59,6 @@
             font-size: 125%;
         }
         
-        .h-1-1>p {
-            font-family: 'JetBrainsMono' !important;
-        }
-        
         .h-2 {
             width: 100%;
             height: 50vh;
@@ -92,6 +83,49 @@
             font-weight: 600;
             font-family: 'SourceHanSerif' !important;
         }
+        
+        .typing-cursor {
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -100,7 +134,7 @@
         <div class="h-1">
             <div class="h-1-1">
                 <h1>你好世界！</h1>
-                <p>/* echo "I'm Saiki,This is my Homepage." */<br /> The Past != Now != The Future</p>
+                <p id="ty" style="white-space:pre;"></p>
             </div>
         </div>
         <div class="h-2">
@@ -127,10 +161,44 @@
         </div>
     </div>
     <meting-js server="netease" type="playlist" id="2417487021" fixed="true" lrc-type="0"></meting-js>
+    <script src="javascript/typinyin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     <script>
-        console.log('\n' + ' %c 54ik1\'s Homepage  %c https://richkk.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        window.onload = function() {
+            var saiki = new Typinyin();
+            saiki.attach('#ty'); // Attach element
+            saiki.setOptions({
+                sentences: [{
+                    ch: ["/* echo 'This is My Homepage' */"],
+                    py: ["/* echo 'This is Mmmmmmm\b\b\b\b\b\by Homepage"],
+                }, {
+                    ch: ["这里是", {
+                        pause: 1500
+                    }, "Saiki", "的", "家", {
+                        del: 1
+                    }, "不是", {
+                        pause: 500
+                    }, {
+                        del: 2
+                    }, "导航", "页面。"],
+                    py: ["zhelishi", "", "Saiki", "de", "jia", "", "bushi", "", "", "daohang", "yemian。"],
+                }, {
+                    ch: ["/* echo 'Have a Good Time!!!' */"],
+                    py: ["/* echo 'Haveeee\b\b\b e\ba g\bGo0\bod Timeeeeee\b\b\b\b\b!!!"],
+                }],
+                startDelay: 1000,
+                typeSpeed: 80,
+                pause: 1000,
+                backSpeed: 50,
+                cursorChar: "♥",
+                loop: false,
+            });
+            saiki.finished = function() {
+                console.log('\n' + ' %c 54ik1\'s Homepage  %c https://richkk.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+            };
+            saiki.init(); // Initialize and start typing
+        }
     </script>
 </body>
 
