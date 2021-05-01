@@ -61,7 +61,7 @@
             display: flex;
             flex-flow: row-reverse nowrap;
             justify-content: center;
-            align-items: stretch;
+            align-items: center;
         }
         
         .h-2-1 {
@@ -71,10 +71,10 @@
         .h-2-1-1 {
             writing-mode: tb-rl;
             font-size: 3vh;
-            text-indent: 5vh;
             letter-spacing: 1.2vh;
             color: #fefefe;
             text-decoration: none;
+            margin: 15px;
         }
         
         a:focus,
@@ -148,45 +148,69 @@
         meting-js>div {
             margin: 0 !important;
         }
+        
+        #source::after {
+            content: "\A OPEN";
+            white-space: pre;
+            font-size: 2vh;
+        }
+        
+        #radio::after {
+            content: "\A RADIO";
+            white-space: pre;
+            font-size: 2vh;
+        }
+        
+        #share::after {
+            content: "\A SHARE";
+            white-space: pre;
+            font-size: 2vh;
+        }
+        
+        #blog::after {
+            content: "\A BLOG";
+            white-space: pre;
+            font-size: 2vh;
+        }
     </style>
 </head>
 
 <body>
     <div class="h">
         <video autoplay playsinline loop muted id="autoplay-v" -webkit-playsinline webkit-playsinline>
-            <source src="video/bgv1.mp4" type="video/mp4"  />
+            <source src="video/bgv3.mp4" type="video/mp4"  />
         </video>
         <div class="h-1">
             <div class="h-1-1">
                 <h1><del>V01CE</del></h1>
                 <p id="ty" style="white-space:pre;"></p>
             </div>
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas" style="padding-top: 32px;"></canvas>
         </div>
         <div class="h-2">
             <div class="h-2-1">
-                <a href="#" class="h-2-1-1">
-                    SOURCE
+                <a href="#" id="source" class="h-2-1-1">
+                    开源
                 </a>
             </div>
             <div class="h-2-1">
-                <a href="#" class="h-2-1-1">
-                    RADIO
+                <a href="#" id="radio" class="h-2-1-1">
+                    留声
                 </a>
             </div>
             <div class="h-2-1">
-                <a href="#" class="h-2-1-1">
-                    SHARE
+                <a href="#" id="share" class="h-2-1-1">
+                    分享
                 </a>
             </div>
             <div class="h-2-1">
-                <a href="#" class="h-2-1-1">
-                    BLOG
+                <a href="#" id="blog" class="h-2-1-1">
+                    博客
                 </a>
             </div>
         </div>
     </div>
-    <meting-js server="netease" type="playlist" id="6734321369" mini="ture" autoplay="true" lrc-type="0"></meting-js>
+    <meting-js style="display: none;" server="netease" type="playlist" id="2516179927" mini="ture" autoplay="true"></meting-js>
     <script type="text/javascript" src="javascript/typinyin.js"></script>
     <script type="text/javascript" src="javascript/wave.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
@@ -208,6 +232,7 @@
             document.addEventListener("touchstart", play, false);
         }
         audioAutoPlay('autoplay-v');
+        audioAutoPlay(ap.play());
         window.onload = function() {
             var saiki = new Typinyin();
             saiki.attach('#ty'); // Attach element
